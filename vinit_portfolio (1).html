@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vinit Wanpartiwar — Marketing × Data × Tech</title>
+<meta name="description" content="Marketing executive and MBA candidate bridging data analytics, CRM systems, and retention strategy. Targeting growth, product marketing, and marketing analytics roles at tech companies.">
+<meta name="keywords" content="Vinit Wanpartiwar, marketing analytics, CRM, loyalty marketing, MBA, Bengaluru, growth marketing, tech career">
+<meta property="og:title" content="Vinit Wanpartiwar — Where Marketing Meets Data">
+<meta property="og:description" content="Marketing executive with a data analyst's mindset. Building loyalty systems and campaign analytics at Elevatoz. Now targeting tech-forward growth roles.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+/* ─── TOKENS ─── */
+:root {
+  --bg:           #08090D;
+  --surface:      #0E1017;
+  --surface-2:    #131622;
+  --border:       #1C2030;
+  --border-h:     #262B3E;
+  --t1:           #E8EAF3;
+  --t2:           #686B82;
+  --t3:           #3D4059;
+  --accent:       #4D6EF5;
+  --accent-l:     #7B96F9;
+  --accent-dim:   rgba(77,110,245,0.10);
+  --teal:         #06C4B0;
+  --teal-dim:     rgba(6,196,176,0.10);
+  --r:            12px;
+  --r-sm:         8px;
+  --ease:         200ms ease;
+}
+
+/* ─── BASE ─── */
+body {
+  background: var(--bg);
+  color: var(--t1);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ─── LAYOUT ─── */
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+section { padding: 120px 0; }
+
+/* ─── NAV ─── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 18px 0;
+  transition: background var(--ease), border-color var(--ease);
+  border-bottom: 1px solid transparent;
+}
+.nav.stuck {
+  background: rgba(8,9,13,0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom-color: var(--border);
+}
+.nav-inner {
+  max-width: 1160px; margin: 0 auto; padding: 0 28px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px; font-weight: 500;
+  color: var(--t1); letter-spacing: -0.01em;
+}
+.nav-logo em { color: var(--accent); font-style: normal; }
+.nav-links {
+  display: flex; gap: 36px; list-style: none;
+}
+.nav-links a {
+  font-size: 14px; font-weight: 500; color: var(--t2);
+  transition: color var(--ease);
+}
+.nav-links a:hover { color: var(--t1); }
+.nav-btn {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px; font-weight: 600;
+  color: var(--t1);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 8px 18px; border-radius: var(--r-sm);
+  transition: border-color var(--ease), background var(--ease);
+}
+.nav-btn:hover { border-color: var(--border-h); background: var(--surface); }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 100px 0 80px;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: 10%; right: -80px;
+  width: 700px; height: 700px;
+  background: radial-gradient(ellipse, rgba(77,110,245,0.07) 0%, transparent 68%);
+  pointer-events: none;
+}
+.hero-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 500;
+  color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-bottom: 28px;
+  opacity: 0; animation: riseUp .6s ease .1s forwards;
+}
+.hero-tag::before {
+  content: ''; display: inline-block;
+  width: 20px; height: 1px; background: var(--accent);
+}
+.hero-h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(46px, 6.2vw, 80px);
+  font-weight: 700; letter-spacing: -0.035em;
+  line-height: 1.06; color: var(--t1);
+  max-width: 740px; margin-bottom: 6px;
+  opacity: 0; animation: riseUp .7s ease .2s forwards;
+}
+.hero-h1 .blue { color: var(--accent-l); }
+.hero-sub {
+  font-size: 18px; color: var(--t2);
+  max-width: 500px; line-height: 1.7; margin-bottom: 44px; font-weight: 400;
+  opacity: 0; animation: riseUp .7s ease .35s forwards;
+}
+.hero-ctas {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  opacity: 0; animation: riseUp .7s ease .5s forwards;
+}
+.btn-p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px; font-weight: 600;
+  background: var(--accent); color: #fff;
+  border: 1px solid var(--accent);
+  padding: 12px 24px; border-radius: var(--r-sm);
+  transition: all var(--ease); letter-spacing: -0.01em;
+}
+.btn-p:hover { background: var(--accent-l); border-color: var(--accent-l); }
+.btn-s {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px; font-weight: 500;
+  color: var(--t2); border: 1px solid var(--border);
+  padding: 12px 24px; border-radius: var(--r-sm);
+  transition: all var(--ease);
+}
+.btn-s:hover { color: var(--t1); border-color: var(--border-h); }
+
+/* metrics row */
+.metrics {
+  display: flex; margin-top: 72px;
+  border: 1px solid var(--border); border-radius: var(--r); overflow: hidden;
+  max-width: 680px;
+  opacity: 0; animation: riseUp .7s ease .65s forwards;
+}
+.metric {
+  flex: 1; padding: 22px 26px;
+  border-right: 1px solid var(--border);
+}
+.metric:last-child { border-right: none; }
+.metric-val {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 30px; font-weight: 700;
+  color: var(--t1); letter-spacing: -0.04em;
+  line-height: 1; margin-bottom: 6px;
+}
+.metric-val b { color: var(--accent); font-weight: 700; }
+.metric-lbl {
+  font-size: 12px; color: var(--t2); line-height: 1.4;
+}
+
+/* hero chart */
+.hero-chart {
+  position: absolute; right: -20px; top: 50%;
+  transform: translateY(-50%);
+  width: 480px; opacity: 0.28; pointer-events: none;
+}
+.cgl { stroke: var(--border); stroke-width: 1; }
+.cpm {
+  fill: none; stroke: var(--accent); stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 820; stroke-dashoffset: 820;
+  animation: draw 2.6s cubic-bezier(.4,0,.2,1) .9s forwards;
+}
+.cps {
+  fill: none; stroke: var(--teal); stroke-width: 1.5;
+  stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 640; stroke-dashoffset: 640;
+  animation: draw 2.6s cubic-bezier(.4,0,.2,1) 1.3s forwards;
+}
+.cdot {
+  fill: var(--accent); opacity: 0;
+  animation: pop .3s ease 3.4s forwards;
+}
+.cdot2 { animation-delay: 3.6s; }
+.cdot3 { animation-delay: 3.8s; }
+
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes pop  { to { opacity: 1; } }
+@keyframes riseUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── DIVIDER ─── */
+.div { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+/* ─── SECTION EYEBROW ─── */
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent);
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 18px;
+}
+.eyebrow::before {
+  content: ''; width: 16px; height: 1px; background: var(--accent);
+}
+.sec-h {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 700; letter-spacing: -0.03em;
+  line-height: 1.12; color: var(--t1); margin-bottom: 16px;
+}
+.sec-p {
+  font-size: 17px; color: var(--t2); line-height: 1.72;
+  max-width: 520px;
+}
+
+/* ─── ABOUT ─── */
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+}
+.about-story { font-size: 16px; color: var(--t2); line-height: 1.82; margin-top: 30px; }
+.about-story p + p { margin-top: 20px; }
+.about-story strong { color: var(--t1); font-weight: 500; }
+.about-cards { padding-top: 8px; }
+.acard {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 22px 24px; margin-bottom: 14px;
+  transition: border-color var(--ease);
+}
+.acard:hover { border-color: var(--border-h); }
+.acard-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--t3); margin-bottom: 10px;
+}
+.acard-body { font-size: 14px; color: var(--t2); line-height: 1.62; }
+.acard-body strong { color: var(--t1); }
+.role-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.role-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  background: var(--accent-dim); color: var(--accent-l);
+  border: 1px solid rgba(77,110,245,0.18);
+  border-radius: 6px; padding: 4px 10px;
+}
+
+/* ─── EXPERIENCE ─── */
+.exp-grid {
+  display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start;
+}
+.exp-sticky { position: sticky; top: 100px; }
+.exp-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 30px 32px;
+  margin-bottom: 18px;
+  transition: border-color var(--ease);
+}
+.exp-card:hover { border-color: var(--border-h); }
+.exp-head {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 16px; margin-bottom: 4px;
+}
+.exp-role {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 17px; font-weight: 600;
+  color: var(--t1); letter-spacing: -0.02em;
+}
+.exp-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--t3); white-space: nowrap; margin-top: 2px;
+}
+.exp-co {
+  font-size: 13px; color: var(--accent-l); font-weight: 500; margin-bottom: 20px;
+}
+.exp-pts { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.exp-pts li {
+  font-size: 14px; color: var(--t2); line-height: 1.62;
+  padding-left: 18px; position: relative;
+}
+.exp-pts li::before { content: '—'; position: absolute; left: 0; color: var(--t3); }
+.exp-pts li strong { color: var(--t1); font-weight: 500; }
+.exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+.exp-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  background: var(--surface-2); color: var(--t2);
+  border: 1px solid var(--border); border-radius: 4px; padding: 4px 8px;
+}
+
+/* ─── PROJECTS ─── */
+.proj-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 60px;
+}
+.proj-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 30px 32px;
+  display: flex; flex-direction: column;
+  transition: border-color var(--ease);
+}
+.proj-card:hover { border-color: var(--border-h); }
+.proj-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--t3); margin-bottom: 18px;
+}
+.proj-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 19px; font-weight: 600;
+  color: var(--t1); letter-spacing: -0.025em;
+  line-height: 1.28; margin-bottom: 6px;
+}
+.proj-org {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--accent-l); margin-bottom: 18px;
+}
+.proj-desc { font-size: 14px; color: var(--t2); line-height: 1.72; flex: 1; }
+.proj-result {
+  margin-top: 22px; padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--teal);
+  display: flex; align-items: flex-start; gap: 7px;
+}
+.proj-result::before { content: '↑'; font-size: 13px; flex-shrink: 0; }
+
+/* ─── SKILLS ─── */
+.skills-wrap { background: var(--surface); }
+.skills-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 44px; margin-top: 64px;
+}
+.skill-cat-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--t3); margin-bottom: 18px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--border);
+}
+.skill-row {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  padding: 9px 0; border-bottom: 1px solid var(--border);
+}
+.skill-name { font-size: 14px; color: var(--t2); }
+.skill-bar {
+  width: 76px; height: 3px;
+  background: var(--border); border-radius: 2px; overflow: hidden;
+}
+.skill-fill {
+  height: 100%; background: var(--accent);
+  border-radius: 2px; width: 0;
+  transition: width 1.1s cubic-bezier(.4,0,.2,1);
+}
+
+/* ─── EDUCATION ─── */
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 16px; }
+.edu-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 30px 32px;
+}
+.edu-deg {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 19px; font-weight: 600;
+  color: var(--t1); letter-spacing: -0.02em; margin-bottom: 6px;
+}
+.edu-sch { font-size: 14px; color: var(--t2); margin-bottom: 20px; }
+.edu-meta { display: flex; gap: 20px; }
+.edu-mi {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--t3);
+}
+.edu-mi span {
+  display: block; margin-top: 4px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px; font-weight: 700;
+  letter-spacing: -0.03em; color: var(--t1);
+}
+.certs { display: flex; gap: 16px; margin-top: 40px; }
+.cert {
+  flex: 1; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 22px 24px;
+  display: flex; align-items: center; gap: 18px;
+}
+.cert-ico {
+  width: 40px; height: 40px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; font-weight: 500; flex-shrink: 0;
+}
+.ico-g { background: var(--accent-dim); color: var(--accent-l); }
+.ico-a { background: var(--teal-dim); color: var(--teal); }
+.cert-name { font-size: 14px; color: var(--t1); font-weight: 500; margin-bottom: 4px; }
+.cert-iss { font-size: 12px; color: var(--t2); }
+
+/* ─── CONTACT ─── */
+.contact-wrap { padding-top: 0; border-top: 1px solid var(--border); }
+.contact-inner {
+  text-align: center; max-width: 500px; margin: 0 auto;
+}
+.contact-inner .sec-h { font-size: clamp(28px, 3.5vw, 42px); }
+.contact-email {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px; color: var(--accent-l); margin-top: 24px;
+  transition: color var(--ease);
+}
+.contact-email:hover { color: var(--t1); }
+.contact-links { display: flex; justify-content: center; gap: 14px; margin-top: 32px; }
+.contact-link {
+  font-size: 14px; font-weight: 500; color: var(--t2);
+  border: 1px solid var(--border); padding: 10px 22px;
+  border-radius: var(--r-sm);
+  transition: color var(--ease), border-color var(--ease);
+}
+.contact-link:hover { color: var(--t1); border-color: var(--border-h); }
+
+/* ─── FOOTER ─── */
+footer { border-top: 1px solid var(--border); padding: 30px 0; }
+.ft-inner {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.ft-copy, .ft-right {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--t3);
+}
+
+/* ─── REVEAL ─── */
+.rev {
+  opacity: 0; transform: translateY(22px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.rev.on { opacity: 1; transform: translateY(0); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .about-grid,
+  .exp-grid,
+  .proj-grid,
+  .skills-grid,
+  .edu-grid { grid-template-columns: 1fr; gap: 28px; }
+  .exp-sticky { position: static; }
+  .hero-chart { display: none; }
+  .metrics { flex-wrap: wrap; }
+  .metric { min-width: 140px; }
+  .certs { flex-direction: column; }
+  .nav-links { display: none; }
+  section { padding: 80px 0; }
+}
+@media (max-width: 520px) {
+  .hero-h1 { font-size: 38px; }
+  .hero-sub { font-size: 16px; }
+  .contact-links { flex-direction: column; align-items: center; }
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .rev { opacity: 1; transform: none; }
+}
+
+/* ─── LIGHT MODE ─── */
+body.light {
+  --bg:         #F5F6FA;
+  --surface:    #FFFFFF;
+  --surface-2:  #EDEEF5;
+  --border:     #DFE1EF;
+  --border-h:   #C5C8DE;
+  --t1:         #0D0F1A;
+  --t2:         #4A4E6B;
+  --t3:         #8A8FA8;
+  --accent:     #3A5BE8;
+  --accent-l:   #2B4AD4;
+  --accent-dim: rgba(58,91,232,0.10);
+  --teal:       #009B8E;
+  --teal-dim:   rgba(0,155,142,0.10);
+}
+body.light .nav.stuck { background: rgba(245,246,250,0.93); }
+body.light .mobile-menu { background: rgba(245,246,250,0.97); }
+body.light .hero::before { background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(58,91,232,0.07) 0%, transparent 70%); }
+
+/* ─── THEME TOGGLE ─── */
+.theme-btn {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: var(--r-sm); width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--t2); font-size: 16px; flex-shrink: 0;
+  transition: border-color var(--ease), color var(--ease), background var(--ease);
+}
+.theme-btn:hover { border-color: var(--border-h); color: var(--t1); }
+
+/* ─── HAMBURGER ─── */
+.ham-btn {
+  display: none; flex-direction: column; justify-content: center;
+  gap: 5px; width: 36px; height: 36px; padding: 6px;
+  background: none; border: none; cursor: pointer; flex-shrink: 0;
+}
+.ham-btn span {
+  display: block; height: 2px; background: var(--t1);
+  border-radius: 2px; transition: all .3s ease; transform-origin: center;
+}
+.ham-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.ham-btn.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.ham-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ─── MOBILE MENU ─── */
+.mobile-menu {
+  display: flex; flex-direction: column;
+  position: fixed; top: 62px; left: 0; right: 0; z-index: 99;
+  background: rgba(8,9,13,0.96);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 28px 24px;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s;
+}
+.mobile-menu.open {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translateY(0);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.mobile-menu a {
+  font-size: 16px; font-weight: 500; color: var(--t2);
+  padding: 15px 0; border-bottom: 1px solid var(--border);
+  transition: color var(--ease);
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:hover { color: var(--t1); }
+
+/* ─── TYPEWRITER CURSOR ─── */
+.tw-cursor {
+  display: inline-block; width: 3px; height: 0.82em;
+  background: var(--accent-l); border-radius: 2px;
+  margin-left: 3px; vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+@media (max-width: 900px) {
+  .ham-btn { display: flex; }
+  .nav-btn  { display: none; }
+}
+@media (min-width: 901px) {
+  .mobile-menu { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">vinit<em>.</em>wanpartiwar</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle colour theme">☀</button>
+      <a href="https://drive.google.com/file/d/1KfT2VYjWJxiBXszByhq4z-x_KzUYK34s/view?usp=drive_link" target="_blank" rel="noopener" class="nav-btn">Resume ↓</a>
+      <button class="ham-btn" id="hamBtn" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+  <a href="https://drive.google.com/file/d/1KfT2VYjWJxiBXszByhq4z-x_KzUYK34s/view?usp=drive_link" target="_blank" rel="noopener" style="color:var(--accent-l)">Resume ↓</a>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-tag">Marketing × Data × Technology</div>
+    <h1 class="hero-h1">Marketing that<br><span class="blue"><span id="tw-text">thinks in systems.</span><span class="tw-cursor"></span></span></h1>
+    <p class="hero-sub">I build loyalty programs, track campaign data, and turn customer behavior into retention strategy. Now bringing that same analytical rigor to tech-forward product and growth teams.</p>
+    <div class="hero-ctas">
+      <a href="#experience" class="btn-p">View My Work</a>
+      <a href="#contact" class="btn-s">Get in Touch</a>
+    </div>
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric-val"><b>5</b>+</div>
+        <div class="metric-lbl">Enterprise loyalty accounts managed</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val"><b>28</b>%</div>
+        <div class="metric-lbl">B2B outreach response rate</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val"><b>30</b>%</div>
+        <div class="metric-lbl">Faster reporting via dashboard builds</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val"><b>15</b>+</div>
+        <div class="metric-lbl">Client datasets segmented & analyzed</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signature chart animation -->
+  <svg class="hero-chart" viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="52"  x2="480" y2="52"  class="cgl"/>
+    <line x1="0" y1="104" x2="480" y2="104" class="cgl"/>
+    <line x1="0" y1="156" x2="480" y2="156" class="cgl"/>
+    <line x1="0" y1="208" x2="480" y2="208" class="cgl"/>
+    <path class="cpm"
+      d="M0,195 C40,185 60,210 100,170 C140,130 160,148 205,108 C250,70 265,90 305,52 C340,22 380,40 420,14 C445,4 462,10 480,8"/>
+    <path class="cps"
+      d="M0,228 C50,220 85,235 125,198 C165,161 182,178 224,145 C266,112 288,130 332,96 C372,66 420,82 480,58"/>
+    <circle cx="205" cy="108" r="4" class="cdot"/>
+    <circle cx="305" cy="52"  r="4" class="cdot cdot2"/>
+    <circle cx="420" cy="14"  r="4" class="cdot cdot3"/>
+  </svg>
+</section>
+
+<hr class="div">
+
+<!-- ══ ABOUT ══ -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="rev">
+        <div class="eyebrow">About</div>
+        <h2 class="sec-h">The marketer who never stopped asking <em style="font-style:normal;color:var(--accent-l)">why</em>.</h2>
+        <div class="about-story">
+          <p>I didn't start in tech. I started in data tables, client dashboards, and the messy work of figuring out why a loyalty campaign underperformed for one segment while it flew for another. That curiosity — <strong>the need to understand the system behind the outcome</strong> — has driven every role I've held.</p>
+          <p>At Elevatoz Loyalty, I run end-to-end CRM campaigns for B2B clients. But more than that, I built the reporting infrastructure that tells us where customers drop off, what keeps them engaged, and what a loyalty program needs to do differently next month. <strong>That's not just marketing — that's product thinking applied to retention.</strong></p>
+          <p>I'm now actively looking to take these skills — campaign analytics, CRM operations, data-informed decision-making — into a tech-forward team where marketing is a growth engine, not an afterthought.</p>
+        </div>
+      </div>
+      <div class="about-cards rev">
+        <div class="acard">
+          <div class="acard-lbl">Currently</div>
+          <div class="acard-body"><strong>Marketing Executive at Elevatoz Loyalty</strong> — a B2B loyalty and engagement platform in Bengaluru. Running loyalty programs, CRM campaigns, and campaign analytics for enterprise clients.</div>
+        </div>
+        <div class="acard">
+          <div class="acard-lbl">Also</div>
+          <div class="acard-body">Pursuing an <strong>MBA in Marketing</strong> at ICFAI Business School (2024–2026), focusing on marketing analytics, consumer behavior, and B2B strategy.</div>
+        </div>
+        <div class="acard">
+          <div class="acard-lbl">Open to</div>
+          <div class="acard-body" style="margin-bottom:10px">Roles where marketing and data meet. Specifically:</div>
+          <div class="role-tags">
+            <span class="role-tag">Product Marketing</span>
+            <span class="role-tag">Growth Analytics</span>
+            <span class="role-tag">Marketing Ops</span>
+            <span class="role-tag">MarTech</span>
+            <span class="role-tag">SaaS Growth</span>
+          </div>
+        </div>
+        <div class="acard">
+          <div class="acard-lbl">Based in</div>
+          <div class="acard-body"><strong>Bengaluru, India</strong> — Open to full-time roles, hybrid or remote-first.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ══ EXPERIENCE ══ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="exp-grid">
+      <div class="exp-sticky rev">
+        <div class="eyebrow">Experience</div>
+        <h2 class="sec-h">Four companies.<br>One consistent thread.</h2>
+        <p class="sec-p">Data-informed decisions, systems thinking, and ownership of outcomes — across loyalty platforms, B2B SaaS, and analytics firms.</p>
+      </div>
+      <div>
+
+        <!-- Elevatoz -->
+        <div class="exp-card rev">
+          <div class="exp-head">
+            <div>
+              <div class="exp-role">Marketing Executive</div>
+              <div class="exp-co">Elevatoz Loyalty — Bengaluru, Karnataka</div>
+            </div>
+            <div class="exp-date">Jan 2025 – Present</div>
+          </div>
+          <ul class="exp-pts">
+            <li>Own <strong>end-to-end CRM communications</strong> — emailers, push notifications, and segmented lifecycle campaigns — across a portfolio of B2B loyalty clients.</li>
+            <li>Analyse weekly campaign performance (open rates, redemption rates, CLV) and translate findings into <strong>retention strategy recommendations</strong> that directly shape client program design.</li>
+            <li>Led loyalty program mapping for new client onboarding — converting raw customer behaviour data into structured engagement frameworks.</li>
+            <li>Partner across design, tech, and client servicing to ship campaigns on time and on-brand, operating as the connective layer between strategy and execution.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">CRM Operations</span>
+            <span class="exp-tag">Campaign Analytics</span>
+            <span class="exp-tag">Retention Strategy</span>
+            <span class="exp-tag">B2B Loyalty</span>
+            <span class="exp-tag">Reporting Dashboards</span>
+          </div>
+        </div>
+
+        <!-- PHENGICON -->
+        <div class="exp-card rev">
+          <div class="exp-head">
+            <div>
+              <div class="exp-role">Marketing Intern</div>
+              <div class="exp-co">PHENGICON — Pune, Maharashtra</div>
+            </div>
+            <div class="exp-date">Feb 2024 – May 2024</div>
+          </div>
+          <ul class="exp-pts">
+            <li>Built a <strong>200+ company prospect database</strong> through structured B2B market research, creating the foundation for a scalable outreach pipeline.</li>
+            <li>Designed a 3-step LinkedIn + cold email sequence that achieved a <strong>28% response rate</strong> — significantly above the 5–10% B2B industry benchmark.</li>
+            <li>Analysed sales conversion data and surfaced tactical adjustments that <strong>improved follow-up efficiency by 20%</strong>.</li>
+            <li>Produced supporting digital content (blogs, videos, flyers) that sustained engagement across the top and middle of the funnel.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">B2B Outreach</span>
+            <span class="exp-tag">Funnel Design</span>
+            <span class="exp-tag">LinkedIn Marketing</span>
+            <span class="exp-tag">Content Creation</span>
+          </div>
+        </div>
+
+        <!-- Delta 360 -->
+        <div class="exp-card rev">
+          <div class="exp-head">
+            <div>
+              <div class="exp-role">Marketing Data Analyst</div>
+              <div class="exp-co">Delta 360 — Pune, Maharashtra</div>
+            </div>
+            <div class="exp-date">Mar 2023 – Jul 2024</div>
+          </div>
+          <ul class="exp-pts">
+            <li>Managed and segmented <strong>complex datasets across 15+ client accounts</strong>, enabling precise audience targeting and campaign customisation at scale.</li>
+            <li>Conducted consumer behaviour research that identified <strong>3 high-potential customer segments</strong>, providing the data foundation for market entry decisions.</li>
+            <li>Evaluated cross-channel campaign ROI and recommended budget reallocation — delivering an estimated <strong>15% improvement in overall return</strong>.</li>
+            <li>Led competitive and market analysis that directly informed quarterly marketing strategy for multiple clients simultaneously.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Data Segmentation</span>
+            <span class="exp-tag">ROI Analysis</span>
+            <span class="exp-tag">Market Research</span>
+            <span class="exp-tag">Multi-client Management</span>
+          </div>
+        </div>
+
+        <!-- Suhas Enterprises -->
+        <div class="exp-card rev">
+          <div class="exp-head">
+            <div>
+              <div class="exp-role">Marketing Intern</div>
+              <div class="exp-co">Suhas Enterprises — Pune, Maharashtra</div>
+            </div>
+            <div class="exp-date">Jun 2022 – Sep 2022</div>
+          </div>
+          <ul class="exp-pts">
+            <li>Identified a <strong>new market opportunity in the EV sector</strong> — proactively reaching out to EV startups and manufacturers to position gearbox components for next-generation vehicles.</li>
+            <li>Designed sales brochures and managed online listings, improving brand visibility among automotive buyers across Pune.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Market Development</span>
+            <span class="exp-tag">B2B Outreach</span>
+            <span class="exp-tag">Collateral Design</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ══ PROJECTS ══ -->
+<section id="projects">
+  <div class="wrap">
+    <div class="rev">
+      <div class="eyebrow">Projects</div>
+      <h2 class="sec-h">Built, shipped, measured.</h2>
+      <p class="sec-p">Work that went beyond deliverables — systems designed to improve, data used to decide, and problems treated as puzzles worth solving.</p>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj-card rev">
+        <div class="proj-num">01 / Campaign Analytics</div>
+        <div class="proj-title">Loyalty Campaign Performance Dashboard</div>
+        <div class="proj-org">Elevatoz Loyalty</div>
+        <div class="proj-desc">Multi-client loyalty campaigns were generating data with no centralised view — each account lived in a separate report reviewed once a week. I built a unified Excel tracking system that monitored open rates, redemption rates, and churn signals across 5 client accounts simultaneously. The system surfaced underperforming segments early, giving the team a 48-hour head start on campaign adjustments that previously required full-week review cycles.</div>
+        <div class="proj-result">30% faster reporting · Early churn detection · 5 accounts consolidated</div>
+      </div>
+
+      <div class="proj-card rev">
+        <div class="proj-num">02 / Growth Systems</div>
+        <div class="proj-title">B2B Outreach Funnel Architecture</div>
+        <div class="proj-org">PHENGICON</div>
+        <div class="proj-desc">No structured outreach existed when I joined. I designed a 3-step touchpoint sequence — LinkedIn connection, personalised message, follow-up email — and built a prospect tracking sheet to log every interaction. By analysing response patterns weekly and iterating on timing and messaging, the funnel reached a 28% response rate. The qualified lead pipeline grew 25% over 6 weeks with no additional headcount.</div>
+        <div class="proj-result">25% increase in qualified leads · 28% response rate · 6-week build</div>
+      </div>
+
+      <div class="proj-card rev">
+        <div class="proj-num">03 / Market Research</div>
+        <div class="proj-title">Market Expansion Study — Bengaluru GTM</div>
+        <div class="proj-org">PHENGICON × ICFAI MBA</div>
+        <div class="proj-desc">Combined a live business problem with a rigorous research framework — ran primary and secondary research to size market demand in Bengaluru, mapped the competitive landscape, and identified 3 high-potential customer segments for PHENGICON's product suite. Delivered a go-to-market recommendation deck to company leadership with segment-level entry strategies and prioritisation rationale.</div>
+        <div class="proj-result">3 customer segments identified · Full GTM plan delivered to leadership</div>
+      </div>
+
+      <div class="proj-card rev">
+        <div class="proj-num">04 / Consumer Behaviour</div>
+        <div class="proj-title">Purchase Decision Patterns — Case Study</div>
+        <div class="proj-org">ICFAI Business School</div>
+        <div class="proj-desc">Analysed purchase decision patterns across 3 distinct consumer segments using survey methodology and secondary research. The 20-page case study mapped decision journeys, identified behavioural triggers, and surfaced how trust, price sensitivity, and brand perception varied across segments. Presented findings to a faculty panel and awarded an A grade.</div>
+        <div class="proj-result">A grade · 3 segments analysed · 20-page academic case study</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ══ SKILLS ══ -->
+<section id="skills" class="skills-wrap">
+  <div class="wrap">
+    <div class="rev">
+      <div class="eyebrow">Skills</div>
+      <h2 class="sec-h">Tools I work with.<br>Problems I solve.</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="rev">
+        <div class="skill-cat-lbl">Data &amp; Analytics</div>
+        <div class="skill-row"><span class="skill-name">Campaign Analytics</span><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+        <div class="skill-row"><span class="skill-name">Microsoft Excel</span><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
+        <div class="skill-row"><span class="skill-name">Reporting &amp; Dashboards</span><div class="skill-bar"><div class="skill-fill" data-w="84"></div></div></div>
+        <div class="skill-row"><span class="skill-name">Data Segmentation</span><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+        <div class="skill-row"><span class="skill-name">SQL (Basics)</span><div class="skill-bar"><div class="skill-fill" data-w="45"></div></div></div>
+      </div>
+      <div class="rev">
+        <div class="skill-cat-lbl">Marketing &amp; Growth</div>
+        <div class="skill-row"><span class="skill-name">CRM Management</span><div class="skill-bar"><div class="skill-fill" data-w="92"></div></div></div>
+        <div class="skill-row"><span class="skill-name">Email / Lifecycle Marketing</span><div class="skill-bar"><div class="skill-fill" data-w="86"></div></div></div>
+        <div class="skill-row"><span class="skill-name">B2B Outreach Strategy</span><div class="skill-bar"><div class="skill-fill" data-w="82"></div></div></div>
+        <div class="skill-row"><span class="skill-name">Content Creation</span><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+        <div class="skill-row"><span class="skill-name">SEO &amp; Google Ads</span><div class="skill-bar"><div class="skill-fill" data-w="64"></div></div></div>
+      </div>
+      <div class="rev">
+        <div class="skill-cat-lbl">Tech &amp; Tools</div>
+        <div class="skill-row"><span class="skill-name">LinkedIn Outreach</span><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
+        <div class="skill-row"><span class="skill-name">Canva / Design Tools</span><div class="skill-bar"><div class="skill-fill" data-w="76"></div></div></div>
+        <div class="skill-row"><span class="skill-name">Social Media Marketing</span><div class="skill-bar"><div class="skill-fill" data-w="74"></div></div></div>
+        <div class="skill-row"><span class="skill-name">Google Analytics</span><div class="skill-bar"><div class="skill-fill" data-w="68"></div></div></div>
+        <div class="skill-row"><span class="skill-name">AWS (Fundamentals)</span><div class="skill-bar"><div class="skill-fill" data-w="38"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ══ EDUCATION ══ -->
+<section id="education">
+  <div class="wrap">
+    <div class="rev">
+      <div class="eyebrow">Education</div>
+      <h2 class="sec-h">Formal foundation.<br>Applied thinking.</h2>
+    </div>
+    <div class="edu-grid rev">
+      <div class="edu-card">
+        <div class="edu-deg">MBA — Marketing</div>
+        <div class="edu-sch">ICFAI Business School, Bengaluru</div>
+        <div class="edu-meta">
+          <div class="edu-mi">Year<span>2024–26</span></div>
+          <div class="edu-mi">CGPA<span>7.25</span></div>
+          <div class="edu-mi">Status<span>Active</span></div>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-deg">BBA — Business Administration</div>
+        <div class="edu-sch">Sir Parshurambhau College of Management, Pune</div>
+        <div class="edu-meta">
+          <div class="edu-mi">Year<span>2020–23</span></div>
+          <div class="edu-mi">CGPA<span>9.17</span></div>
+          <div class="edu-mi">Grade<span>Distinction</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="certs rev">
+      <div class="cert">
+        <div class="cert-ico ico-g">G</div>
+        <div>
+          <div class="cert-name">Google Digital Marketing</div>
+          <div class="cert-iss">Google · Fundamentals Certification</div>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-ico ico-a">AWS</div>
+        <div>
+          <div class="cert-name">AWS Learning Badge</div>
+          <div class="cert-iss">Amazon Web Services · Cloud Fundamentals</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ══ CONTACT ══ -->
+<section id="contact" class="contact-wrap">
+  <div class="wrap">
+    <div class="contact-inner rev">
+      <div class="eyebrow" style="justify-content:center">Contact</div>
+      <h2 class="sec-h" style="font-size:clamp(28px,3.5vw,42px)">Let's build something<br>worth measuring.</h2>
+      <p class="sec-p" style="max-width:100%;text-align:center;margin-top:14px">I'm actively looking for growth, product marketing, and marketing analytics roles at tech companies. If you're hiring — or just want to talk — reach out.</p>
+      <a href="mailto:vinitvanpartiwar33@gmail.com" class="contact-email">vinitvanpartiwar33@gmail.com</a>
+      <div class="contact-links">
+        <a href="https://linkedin.com/in/vinitvanpartiwar" target="_blank" rel="noopener" class="contact-link">LinkedIn ↗</a>
+        <a href="mailto:vinitvanpartiwar33@gmail.com" class="contact-link">Send Email ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="wrap">
+    <div class="ft-inner">
+      <div class="ft-copy">© 2025 Vinit Wanpartiwar · Bengaluru, India</div>
+      <div class="ft-right">Marketing × Data × Tech</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('stuck', window.scrollY > 32);
+}, { passive: true });
+
+// Scroll reveal
+const revObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); revObs.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+document.querySelectorAll('.rev').forEach(el => revObs.observe(el));
+
+// Skill bars
+const skillObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const f = e.target;
+      const w = f.dataset.w;
+      f.style.width = w + '%';
+      f.style.background = w >= 80 ? 'var(--accent)' : w >= 60 ? 'var(--accent-l)' : 'var(--t3)';
+      skillObs.unobserve(f);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.skill-fill').forEach(el => skillObs.observe(el));
+
+// Counter animation
+function counter(el, target, dur = 1200) {
+  let s = 0, step = target / (dur / 16);
+  const t = setInterval(() => {
+    s = Math.min(s + step, target);
+    el.textContent = Math.floor(s);
+    if (s >= target) clearInterval(t);
+  }, 16);
+}
+const mObs = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+    document.querySelectorAll('.metric-val b').forEach(el => counter(el, +el.textContent));
+    mObs.disconnect();
+  }
+}, { threshold: 0.5 });
+const mWrap = document.querySelector('.metrics');
+if (mWrap) mObs.observe(mWrap);
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+
+// ── Theme Toggle ──
+(function () {
+  const btn  = document.getElementById('themeToggle');
+  if (!btn) return;
+  const saved = localStorage.getItem('vw-theme');
+  if (saved === 'light') { document.body.classList.add('light'); btn.textContent = '☾'; }
+  btn.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light');
+    btn.textContent = isLight ? '☾' : '☀';
+    localStorage.setItem('vw-theme', isLight ? 'light' : 'dark');
+  });
+})();
+
+// ── Hamburger Menu ──
+(function () {
+  const ham  = document.getElementById('hamBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (!ham || !menu) return;
+  ham.addEventListener('click', () => {
+    const open = ham.classList.toggle('open');
+    menu.classList.toggle('open', open);
+    ham.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  menu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      ham.classList.remove('open');
+      menu.classList.remove('open');
+      ham.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+
+// ── Typewriter ──
+(function () {
+  const el = document.getElementById('tw-text');
+  if (!el) return;
+  const phrases = [
+    'thinks in systems.',
+    'grows with data.',
+    'ships with purpose.',
+    'speaks to engineers.'
+  ];
+  let pi = 0, ci = phrases[0].length, deleting = true;
+  function tick() {
+    const full = phrases[pi];
+    if (!deleting) {
+      el.textContent = full.slice(0, ++ci);
+      if (ci === full.length) { deleting = true; return setTimeout(tick, 2000); }
+    } else {
+      el.textContent = full.slice(0, --ci);
+      if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
+    }
+    setTimeout(tick, deleting ? 48 : 90);
+  }
+  setTimeout(tick, 2500);
+})();
+</script>
+</body>
+</html>
